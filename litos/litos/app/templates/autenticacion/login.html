@@ -1,0 +1,12 @@
+{% extends 'layout/base.html' %}
+{% block contenido %}
+
+<form action="{{url_for('autenticacion.login') }}" method = "POST">
+    {{ login.usuario.label }}
+    {{ login.usuario(class="form-control") }}
+    {{ login.password.label }}
+    {{ login.password(class="form-control") }}
+    {{ login.next() }}
+    <input class="btn btn-primary btn-lg btn-block mt4" type="submit" value="Enviar">
+</form>
+{% endblock %}
