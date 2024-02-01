@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efb024d9-a4b6-4f91-ab32-c218d4992f35" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/autenticacion/autenticacion_vista.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/autenticacion/autenticacion_vista.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/autenticacion/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/autenticacion/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/autenticacion/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/autenticacion/registro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/layout/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="efb024d9-a4b6-4f91-ab32-c218d4992f35" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +43,7 @@
     &quot;Python.run.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/imib/Documents/panelv2/app/panel/panel_vistas.py&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
