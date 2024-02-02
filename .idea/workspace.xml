@@ -4,7 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="efb024d9-a4b6-4f91-ab32-c218d4992f35" name="Changes" comment="" />
+=======
+    <list default="true" id="efb024d9-a4b6-4f91-ab32-c218d4992f35" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/.idea/litos.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/autenticacion/autenticacion_bbdd.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/autenticacion/autenticacion_vista.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/litos/litos_bbdd.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/litos/litos_vistas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/.Rhistory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/global/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/global/css/documentacion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/global/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/static/global/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/templates/autenticacion/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/templates/layout/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/app/templates/litos/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/configuracion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/requirement.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/litos/litos/run.py" beforeDir="false" />
+    </list>
+>>>>>>> 2b557f2 (cc)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
