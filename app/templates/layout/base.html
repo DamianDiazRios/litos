@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LITOS</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico')}}" type="image/png" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='global/css/documentacion.css') }}">
+</head>
+<body>
+    <div class="row">
+        <div class="col mt-4 ml-3 mr-3">
+<<<<<<< HEAD
+        {% include 'fragmentos/_alertas.html' %}
+=======
+>>>>>>> bfbf25c (casa)
+        {% block contenido %}
+        {% endblock %}
+        </div>
+    </div>
+<script src="{{ url_for('static', filename='global/js/jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+</body>
+</html>
