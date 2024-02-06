@@ -33,7 +33,7 @@ def login():
         if usuario and usuario.chekc_password(formulario.password.data) and usuario.activo == True:
             login_user(usuario)
             flash ("Bienvenido "+ current_user.usuario)
-            next = request.formulario['next']
+            next = request.form['next']
             return redirect(next or url_for('litos.index'))
         else:
             flash("Usuario o la contraseña no son correctos", 'danger')
@@ -41,16 +41,6 @@ def login():
         flash(formulario.errors, 'danger')
     return render_template('autenticacion/login.html', login=formulario)
 
-<<<<<<< HEAD
-
-@autenticacion.route('/logout')
-def logout():
-    logout_user()
-    return redirect(url_for('autenticacion.login'))
-
-
-=======
->>>>>>> bfbf25c (casa)
 @autenticacion.route('/registro_usuario', methods = ('GET', 'POST'))
 def registro():
     if session.get('usuario'):
@@ -64,16 +54,4 @@ def registro():
         return redirect(url_for('autenticacion.registro'))
     if formulario.errors:
         flash(formulario.errors, 'danger')
-<<<<<<< HEAD
-    return render_template('/autenticacion/registro.html', registro=formulario)
-
-
-@autenticacion.route('/usuarios', methods=('GET', 'POST'))
-def usuarios():
-    usuario = Usuario.query.order_by(Usuario.usuario.asc())
-    for usu in usuario:
-        print(usu.usuario)      #Este bucle es para recordar como leer los datos de la consulta sqlalchemy
-    return render_template('/autenticacion/lista_usuarios.html', usuario=usuario)
-=======
     return render_template('/autenticacion/registro.html', registro = formulario)
->>>>>>> bfbf25c (casa)

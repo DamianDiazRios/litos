@@ -2,55 +2,5 @@
 {% block contenido %}
 
 
-<<<<<<< HEAD
-<form class="row g-3" align="center" action="{{ url_for('autenticacion.registro') }}" method="POST">
-=======
-<form class="row g-3" align="center" action="{{ url_for('autenticacion.registro') }}" methods="POST">
->>>>>>> bfbf25c (casa)
-
-    <div class="col-md-4 mb-3">
-        {{registro.usuario.label(class="form-label")}}
-        {{registro.usuario(class="form-control")}}
-    </div>
-    <div class="col-md-4 mb-3">
-        {{registro.apellido1.label(class="form-label")}}
-        {{registro.apellido1(class="form-control")}}
-    </div>
-    <div class="col-md-4 mb-3">
-        {{registro.apellido2.label(class="form-label")}}
-        {{registro.apellido2(class="form-control")}}
-    </div>
-    <div class="col-md-3"></div>
-    <div class="col-md-3">
-        {{registro.password.label(class="form-label")}}
-        {{registro.password(class="form-control")}}
-    </div>
-    <div class="col-md-3">
-        {{registro.confirmar.label(class="form-label")}}
-        {{registro.confirmar(class="form-control")}}
-    </div>
-    <div class="col-md-3"></div>
-<<<<<<< HEAD
-    <div class="col-md-3"></div>
-    <div class="col-md-3 mb-3">
-        {{ registro.correo.label(class="form-label") }}
-        <div class="input-group">
-            <span class="input-group-text">@</span>
-            {{ registro.correo(class="form-control") }}
-        </div>
-    </div>
-    <div class="col-md-3">
-        {{ registro.rol.label(class="form-label") }}
-        {{ registro.rol(class="form-control") }}
-    </div>
-    <div class="col-md-3"></div>
-=======
->>>>>>> bfbf25c (casa)
-    <div class="col-md-4"></div>
-    <div class="d-grip gap-2 col-md-4 mt-5">
-        <button class="btn btn-primary btn-lg btn-block mt-2" type="submit">Añadir</button>
-    </div>
-    <div class="col-md-4"></div>
-</form>
 
 {% endblock %}
