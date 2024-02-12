@@ -45,13 +45,17 @@ def login():
 def registro():
     if session.get('usuario'):
         print(session['username'])
-    formulario = RegistroUsuario(meta={'csrf':False})
-    if formulario.validate_on_submit():
-        usuario = Usuario(formulario.usuario.data, formulario.apellido1.data, formulario.apellido2.data, formulario.password.data, formulario.rol.data, formulario.correo.data)
-        db.session.add(usuario)
-        db.session.commit()
-        flash("Usuario creado con éxito")
-        return redirect(url_for('autenticacion.registro'))
-    if formulario.errors:
-        flash(formulario.errors, 'danger')
+    else:
+        formulario = RegistroUsuario(meta={'csrf':False})
+        print(formulario.validate_on_submit())
+        if formulario.validate_on_submit():
+            print(formulario.validate_on_submit())
+            usuario = Usuario(formulario.usuario.data, formulario.apellido1.data, formulario.apellido2.data, formulario.password.data, formulario.rol.data, formulario.correo.data)
+            print(usuario.id)
+            db.session.add(usuario)
+            db.session.commit()
+            flash("Usuario creado con éxito")
+            return redirect(url_for('autenticacion.registro'))
+        if formulario.errors:
+            flash(formulario.errors, 'danger')
     return render_template('/autenticacion/registro.html', registro = formulario)
