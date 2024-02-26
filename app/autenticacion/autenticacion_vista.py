@@ -50,7 +50,7 @@ def logout():
 @autenticacion.route('/registro_usuario', methods = ('GET', 'POST'))
 def registro():
     if session.get('usuario'):
-        print(session['username'])
+        (session['username'])
     formulario = RegistroUsuario(meta={'csrf':False})
     if formulario.validate_on_submit():
         usuario = Usuario(formulario.usuario.data, formulario.apellido1.data, formulario.apellido2.data, formulario.password.data, formulario.rol.data, formulario.correo.data)
