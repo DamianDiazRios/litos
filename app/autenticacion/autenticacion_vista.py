@@ -41,6 +41,16 @@ def login():
         flash(formulario.errors, 'danger')
     return render_template('autenticacion/login.html', login=formulario)
 
+<<<<<<< HEAD
+=======
+
+@autenticacion.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('autenticacion.login'))
+
+
+>>>>>>> 90f594a (puva)
 @autenticacion.route('/registro_usuario', methods = ('GET', 'POST'))
 def registro():
     if session.get('usuario'):
@@ -54,4 +64,16 @@ def registro():
         return redirect(url_for('autenticacion.registro'))
     if formulario.errors:
         flash(formulario.errors, 'danger')
+<<<<<<< HEAD
     return render_template('/autenticacion/registro.html', registro = formulario)
+=======
+    return render_template('/autenticacion/registro.html', registro=formulario)
+
+
+@autenticacion.route('/usuarios', methods=('GET', 'POST'))
+def usuarios():
+    usuario = Usuario.query.order_by(Usuario.usuario.asc())
+    for usu in usuario:
+        print(usu.usuario)      #Este bucle es para recordar como leer los datos de la consulta sqlalchemy
+    return render_template('/autenticacion/lista_usuarios.html', usuario=usuario)
+>>>>>>> 90f594a (puva)
