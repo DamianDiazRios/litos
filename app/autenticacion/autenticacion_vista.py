@@ -30,10 +30,10 @@ def login():
     formulario = Login(meta={'csrf':False})
     if formulario.validate_on_submit():
         usuario = Usuario.query.filter_by(usuario=formulario.usuario.data).first()
-        if usuario and usuario.chekc_password(formulario.password.data) and usuario.activo == True:
+        if usuario and usuario.check_password(formulario.password.data) and usuario.activo == True:
             login_user(usuario)
             flash ("Bienvenido "+ current_user.usuario)
-            next = request.formulario['next']
+            next = request.form['next']
             return redirect(next or url_for('litos.index'))
         else:
             flash("Usuario o la contraseña no son correctos", 'danger')
@@ -41,16 +41,12 @@ def login():
         flash(formulario.errors, 'danger')
     return render_template('autenticacion/login.html', login=formulario)
 
-<<<<<<< HEAD
-=======
-
 @autenticacion.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('autenticacion.login'))
 
 
->>>>>>> 90f594a (puva)
 @autenticacion.route('/registro_usuario', methods = ('GET', 'POST'))
 def registro():
     if session.get('usuario'):
@@ -64,9 +60,9 @@ def registro():
         return redirect(url_for('autenticacion.registro'))
     if formulario.errors:
         flash(formulario.errors, 'danger')
-<<<<<<< HEAD
+
     return render_template('/autenticacion/registro.html', registro = formulario)
-=======
+
     return render_template('/autenticacion/registro.html', registro=formulario)
 
 
@@ -76,4 +72,4 @@ def usuarios():
     for usu in usuario:
         print(usu.usuario)      #Este bucle es para recordar como leer los datos de la consulta sqlalchemy
     return render_template('/autenticacion/lista_usuarios.html', usuario=usuario)
->>>>>>> 90f594a (puva)
+
