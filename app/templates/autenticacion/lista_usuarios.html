@@ -23,6 +23,25 @@
             {% for usu in usuario %}
                 <tr>
                     <td>{{ usu.id }}</td>
+                    <td>{{ usu.usuario }}</td>
+                    <td>{{ usu.apellido1}}</td>
+                    <td>{{ usu.apellido2}}</td>
+                    <td>{{ usu.rol}}</td>
+                    <td>{{ usu.correo}}</td>
+                    {% if True == usu.activo %}
+                        <td>Activo</td>
+                    {% else %}
+                        <td>No activo</td>
+                    {% endif %}
+                    <td>{{ usu.fecha}}</td>
+                    <td>
+                        <div class="btn-group">
+                            <div class="text-center">
+                                <a href="{{ url_for('autenticacion.editar', id=usu['id']) }}" class="btn btn-backupEditar" ><i class="fa fa-wrench"></i> </a>
+                                <a href="{{ url_for('autenticacion.passeditar', id=usu['id'])}}" class="btn btn-backupEditar"><i class="fa fa-key"></i></a>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>

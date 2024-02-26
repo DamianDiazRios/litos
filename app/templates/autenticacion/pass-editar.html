@@ -1,0 +1,20 @@
+{% extends 'layout/base.html' %}
+
+{% block contenido %}
+
+<div class="text-center">
+    <a class="btn btn-warning" href="{{ url_for('autenticacion.usuarios') }}">Usuario</a>
+</div>
+</br>
+<div class="form-group">
+    <form action="{{ url_for('autenticacion.passeditar', id=usuario.id) }}" method="POST">
+
+        {% include 'autenticacion/_formularioPass.html' %}
+        <input class="btn btn-success -btn-lg btn-block" type="submit" value="Actualizar">
+    </form>
+</div>
+
+<br/>
+
+
+{% endblock %}

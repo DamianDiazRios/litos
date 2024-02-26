@@ -63,13 +63,57 @@ def registro():
 
     return render_template('/autenticacion/registro.html', registro = formulario)
 
-    return render_template('/autenticacion/registro.html', registro=formulario)
-
 
 @autenticacion.route('/usuarios', methods=('GET', 'POST'))
 def usuarios():
     usuario = Usuario.query.order_by(Usuario.usuario.asc())
     for usu in usuario:
-        print(usu.usuario)      #Este bucle es para recordar como leer los datos de la consulta sqlalchemy
+        print(usu.usuario)#Este bucle es para recordar como leer los datos de la consulta sqlalchemy
     return render_template('/autenticacion/lista_usuarios.html', usuario=usuario)
 
+@autenticacion.route('/editar/<int:id>', methods=['GET', 'POST'])
+def editar(id):
+    usuario = Usuario.query.get_or_404(id)
+    formulario = EditarForm(meta={'csrf':False})
+
+    if request.method == 'GET':
+        formulario.usuario.data = usuario.usuario
+        formulario.apellido1.data = usuario.apellido1
+        formulario.apellido2.data = usuario.apellido2
+        formulario.rol.data = usuario.rol
+        formulario.correo.data = usuario.rol
+        formulario.activo.data = usuario.activo
+
+    if formulario.validate_on_submit():
+        usuario.usuario = formulario.usuario.data
+        usuario.apellido1 = formulario.apellido1.data
+        usuario.apellido2 = formulario.apellido2.data
+        usuario.correo = formulario.correo.data
+        usuario.rol = formulario.rol.data
+        db.session.add(usuario)
+        db.session.commit()
+        flash("Usuario actualizado")
+        return redirect(url_for('autenticacion.usuarios'))
+
+    if formulario.errors:
+        flash(formulario.errors, 'danger')
+    return render_template('/autenticacion/usuario-editar.html', usuario=usuario, formulario=formulario)
+
+@autenticacion.route('/pass-editar/<int:id>', methods=['GET', 'POST'])
+def passeditar(id):
+    usuario = Usuario.query.get_or_404(id)
+    formularioPasswd = EditarPass(meta={'csrf':False})
+    if request.method == 'GET':
+        formularioPasswd.password.data = usuario.password
+
+    if formularioPasswd.validate_on_submit():
+        password = formularioPasswd.password.data
+        usuario.password = generate_password_hash(password)
+        db.session.add(usuario)
+        db.session.commit()
+        flash("Usuario actualizado")
+        return redirect(url_for('autenticacion.usuarios'))
+
+    if formularioPasswd.errors:
+        flash(formularioPasswd.errors, 'danger')
+    return render_template('/autenticacion/pass-editar.html', usuario=usuario, formulario=formularioPasswd)

@@ -57,6 +57,8 @@ class Login(FlaskForm):
 
 class EditarForm(FlaskForm):
     usuario = StringField('usuario', validators=[InputRequired()])
+    apellido1 = StringField('Primer Apellido')
+    apellido2 = StringField('Segundo Apellido')
     correo = StringField('correo')
     rol = SelectField('Permisos', choices=[('normal', 'normal'), ('admin', 'admin')])
     activo = BooleanField('Activo', default=True)
